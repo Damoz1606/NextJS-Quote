@@ -1,6 +1,8 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+  
+  --primary-color-rgb: 254, 129, 56;
 
   --primary-color-hex: #fe8138;
   --foreground-hex: #323337;
@@ -29,4 +31,5 @@ body {
 button,
 a {
   all: unset;
+  cursor: pointer;
 }

@@ -1,3 +1,10 @@
+.quote_area,
+.quote_author {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .quote_area {
     display: flex;
     justify-content: center;
@@ -25,12 +32,12 @@
 .quote {
     font-size: 1rem;
     text-align: center;
-    word-break: break-all;
+    word-break: keep-all;
     margin-left: .5rem;
     margin-right: .5rem;
 }
 
-.quote_autor {
+.quote_author {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -38,9 +45,104 @@
     font-style: italic;
 }
 
-.quote_autor .name {
+.quote_author .name {
     text-align: right;
     font-size: 0.75rem;
     margin-left: 0.5rem;
     font-family: monospace;
+}
+
+.quote_buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quote_buttons .button_box {
+    display: flex;
+    flex-direction: row;
+}
+
+.quote_buttons .button_box svg,
+.quote_buttons .button_box path {
+    fill: none;
+    stroke: var(--primary-color-hex);
+    stroke-width: 2px;
+    transition: stroke .3s ease-in-out;
+}
+
+.quote_buttons .button_box button {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    border: 2px solid var(--primary-color-hex);
+    cursor: pointer;
+
+    transition: all .2s ease-in-out;
+}
+
+.quote_buttons .button_box svg {
+    transition: transform .1s ease-in-out;
+}
+
+
+.quote_buttons .button_box button:hover {
+    background-color: var(--primary-color-hex);
+}
+
+.quote_buttons .button_box button:active svg {
+    transform: scale(1.25);
+}
+
+.quote_buttons .button_box button:hover path {
+    stroke: white;
+}
+
+button.next_quote {
+    position: relative;
+    background-color: var(--primary-color-hex);
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    animation: rotate 4s linear infinite -1s;
+    transition: all .2s ease-in-out;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button.next_quote:hover {
+    background-color: white;
+    color: var(--primary-color-hex);
+    border-color: var(--primary-color-hex);
+}
+
+button.next_quote:active {
+    background-color: rgba(var(--primary-color-rgb), 0.25);
+}
+
+.button_box button[disabled]:hover {
+    background-color: white;
+}
+
+.button_box button[disabled]:hover path {
+    stroke: var(--primary-color-hex)
+}
+
+.button_box button[disabled]:active svg {
+    transform: scale(1);
+}
+
+.button_box button[disabled],
+button.next_quote[disabled] {
+    cursor: auto;
+    background-color: white;
+    color: var(--primary-color-hex);
+    border-color: transparent;
 }

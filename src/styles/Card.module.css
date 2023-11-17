@@ -19,6 +19,11 @@
     font-weight: 500;
 }
 
+.card .card_body{
+    min-height: 75px;
+    transition: height .3s ease-in;
+}
+
 .card .card_footer {
     display: flex;
     flex-direction: row;
