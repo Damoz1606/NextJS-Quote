@@ -1,0 +1,27 @@
+.card {
+    width: 605px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px 25px;
+    box-shadow: 0 12px 35px rgba(219, 219, 219, 0.1);
+}
+
+.card .card_header,
+.card .card_body,
+.card .card_footer {
+    margin: 1rem;
+}
+
+.card .card_header {
+    margin-top: 0;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.card .card_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

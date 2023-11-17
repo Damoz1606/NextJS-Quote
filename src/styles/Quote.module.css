@@ -1,0 +1,46 @@
+.quote_area {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.quote_area svg {
+    width: 5rem;
+}
+
+.quote_area .open_quote {
+    align-self: flex-start;
+}
+
+.quote_area .end_quote {
+    align-self: flex-end;
+}
+
+.quote_area path {
+    fill: var(--primary-color-hex);
+}
+
+.quote {
+    font-size: 1rem;
+    text-align: center;
+    word-break: break-all;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.quote_autor {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-style: italic;
+}
+
+.quote_autor .name {
+    text-align: right;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    font-family: monospace;
+}
