@@ -1,5 +1,5 @@
 export const config = {
     api: {
-        quote: "http://api.quotable.io/random"
+        quote: "https://api.quotable.io/random"
     }
 }
