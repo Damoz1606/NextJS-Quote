@@ -1,0 +1,68 @@
+.notification {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    min-width: 150px;
+    width: max-content;
+    padding: 10px 25px;
+    border-radius: 4px;
+    background-color: #141619;
+    color: #f6f5f9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    visibility: hidden;
+}
+
+.notification.active {
+    animation: fade-in 4s linear forwards;
+}
+
+.notification .message {
+    width: 100%;
+    text-align: center;
+}
+
+.notification.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: rgba(128, 128, 128, 0.442);
+}
+
+.notification.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(to right, #539bdb, #3250bf);
+    animation: load 3s 0.25s linear forwards;
+}
+
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        /* transform: translateY(0); */
+    }
+
+    90% {
+        opacity: 1;
+    }
+}
+
+@keyframes load {
+    to {
+        transform: scale(1);
+    }
+}
