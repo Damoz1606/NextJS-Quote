@@ -37,7 +37,6 @@ const Quote: React.FC = () => {
         setLoadingQuote(true);
         try {
             const result = await fetchQuote();
-            console.log(result);
             const newQuote = result.content;
             const newAuthor = result.author;
             setQuote(newQuote);
